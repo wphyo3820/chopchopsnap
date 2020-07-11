@@ -424,7 +424,7 @@ main sub {
 }
 
 .split-left {
-    background-image: url(/assets/frenchtoast1.jpg);
+    background-image: url(https://raw.githubusercontent.com/wphyo3820/chopchopsnap/master/assets/frenchtoast1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
