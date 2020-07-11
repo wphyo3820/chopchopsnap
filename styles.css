@@ -375,7 +375,7 @@ main sub {
 .headline-wrapper .headline-section {
     padding-top: 150px;
     max-width: 950px;
-    width: 95%;
+    width: 100%;
     z-index: 100;
     position: relative;
     margin: 0 auto;
@@ -391,4 +391,94 @@ main sub {
     letter-spacing: 0.1em;
     line-height: 1.2;
     text-align: left;
+}
+
+.split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: overflow;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 49em) {
+    .split .split-section {
+        width: 50%;
+    }
+}
+
+.split .split-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.split-left {
+    background-image: url(/assets/frenchtoast1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    /* visibility: hidden; */
+    width: 0;
+}
+@media only screen and (min-width: 49em) { 
+    .split-right {
+        max-width: 50%;
+        left: 50%;
+        padding: 0 .5rem;
+    }
+}
+.split-right {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    width: 100%;
+    z-index: -100;
+}
+
+@media only screen and (min-width: 49em) {
+    .split-right-content {
+        padding-left: 2rem;
+    }
+}
+.split-right-content {
+    padding: 0 .5rem;
+    max-width: 100%;
+    margin: 0 auto;
 }
